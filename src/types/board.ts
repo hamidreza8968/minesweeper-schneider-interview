@@ -1,4 +1,5 @@
 import React from "react";
+import {GameStatusType} from "../constants/constants";
 
 export interface CellType {
     row: number;
@@ -16,8 +17,8 @@ export interface BoardContextType {
     rows: number;
     cols: number;
     bombRate: number;
-    gameStatus: string;
-    setGameStatus: React.Dispatch<React.SetStateAction<string>>;
+    gameStatus: GameStatusType;
+    setGameStatus: React.Dispatch<React.SetStateAction<GameStatusType>>;
     startTime: number | null;
     setStartTime: React.Dispatch<React.SetStateAction<number | null>>;
     elapsedTime: number;
