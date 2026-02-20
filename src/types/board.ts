@@ -35,3 +35,10 @@ export interface SelectedCell {
     row: number;
     col: number;
 }
+
+export interface CellProps {
+    cell: CellType;
+    onClick: () => void;
+    onRightClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    isSelected: boolean;
+}

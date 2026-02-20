@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { GameStatus } from "../constants/constants";
 import { KeyboardNavigationProps } from "../types/keyboardNavigation";
 
@@ -38,7 +38,7 @@ export const useKeyboardNavigation = ({
                         break;
                     case "f":
                     case "F":
-                        handleFlag({ preventDefault: () => {} }, row, col);
+                        handleFlag({ preventDefault: () => {} } as unknown as React.MouseEvent<HTMLButtonElement>, row, col);
                         break;
                     default:
                         return prev;

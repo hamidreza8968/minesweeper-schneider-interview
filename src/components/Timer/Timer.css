@@ -1,0 +1,20 @@
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-small);
+    background-color: var(--color-board-bg);
+    padding: 0 1px;
+    border: 2px solid var(--color-board-border);
+    border-top-color: var(--color-board-highlight);
+    border-left-color: var(--color-board-highlight);
+    border-bottom-color: var(--color-board-border);
+    border-right-color: var(--color-board-border);
+    font-family: var(--font-monospace);
+    font-size: 1.5rem;
+    color: var(--color-timer);
+}
+
+.timer p {
+    margin: 0;
+}
