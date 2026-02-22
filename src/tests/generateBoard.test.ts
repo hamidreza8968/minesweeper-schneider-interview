@@ -8,7 +8,6 @@ describe("Board generation", () => {
         const bombs = board.flat().filter(c => c.isBomb);
         expect(bombs.length).toBe(Math.floor(rows * cols * bombRate));
 
-        // Neighbor counts should match surrounding bombs
         board.forEach((rowArr, r) => {
             rowArr.forEach((cell, c) => {
                 if (!cell.isBomb) {

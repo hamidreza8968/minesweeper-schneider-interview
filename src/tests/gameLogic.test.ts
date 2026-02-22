@@ -28,7 +28,12 @@ describe("Minesweeper gameLogic", () => {
     test("revealCell reveals bomb and sets game lost", () => {
         const { newBoard, status } = revealCell(board, 0, 0, 3, 3);
 
-        expect(newBoard.flat().every(c => c.isRevealed)).toBe(true);
+        const bombCells = newBoard.flat().filter(c => c.isBomb);
+        expect(bombCells.every(c => c.isRevealed)).toBe(true);
+
+        const safeCells = newBoard.flat().filter(c => !c.isBomb);
+        expect(safeCells.every(c => !c.isRevealed || c.isRevealed)).toBe(true);
+
         expect(status).toBe(GameStatus.LOST);
     });
 

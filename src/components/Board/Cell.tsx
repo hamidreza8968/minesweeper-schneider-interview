@@ -3,7 +3,7 @@ import "./Board.css";
 import {CellProps} from "../../types/board";
 
 
-const Cell = React.memo(({cell, onClick, onRightClick, isSelected}: CellProps) => {
+const Cell = ({cell, onClick, onRightClick, isSelected}: CellProps) => {
     const ref = useRef<HTMLButtonElement>(null);
 
     useEffect(() => {
@@ -28,6 +28,6 @@ const Cell = React.memo(({cell, onClick, onRightClick, isSelected}: CellProps) =
             {cell.isRevealed ? (cell.isBomb ? "💣" : cell.neighborBombs || "") : cell.isFlagged ? "🚩" : ""}
         </button>
     );
-});
+};
 
 export default Cell;

@@ -38,6 +38,7 @@ export const useKeyboardNavigation = ({
                         break;
                     case "f":
                     case "F":
+                        // eslint-disable-next-line @typescript-eslint/no-empty-function
                         handleFlag({ preventDefault: () => {} } as unknown as React.MouseEvent<HTMLButtonElement>, row, col);
                         break;
                     default:

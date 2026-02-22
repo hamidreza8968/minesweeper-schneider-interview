@@ -9,7 +9,7 @@ const Timer = () => {
     const displayTime = String(limitedTime).padStart(3, "0");
 
     return (
-        <div className="timer" aria-label={`Elapsed time: ${limitedTime} seconds`} tabIndex={0} role="timer"
+        <div className="timer" aria-label={`Elapsed time: ${limitedTime} seconds`} role="timer"
              aria-live="polite">
             {displayTime}
         </div>

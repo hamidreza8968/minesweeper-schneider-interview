@@ -54,13 +54,17 @@ const Board: React.FC<{ className?: string }> = ({ className }) => {
     });
 
     return (
-        <div className={`board ${className}`} onMouseDown={handleMouseDown}>
+        <div className={`board ${className}`}>
             <div className="topBox">
                 <ResetButton />
                 <Timer />
             </div>
             <div
                 className="grid"
+                role="grid"
+                aria-label="Minesweeper game board"
+                tabIndex={0}
+                onMouseDown={handleMouseDown}
                 style={{
                     gridTemplateColumns: `repeat(${cols}, 1fr)`,
                     gridTemplateRows: `repeat(${rows}, 1fr)`,
