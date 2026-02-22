@@ -1,0 +1,7 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-large);
+  text-align: center;
+}

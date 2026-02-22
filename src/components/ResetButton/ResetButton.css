@@ -1,0 +1,27 @@
+.reset-button {
+    width: var(--reset-size);
+    height: var(--reset-size);
+    font-size: 2rem;
+    background-color: var(--color-board-bg);
+    border-top: 2px solid var(--color-board-highlight);
+    border-left: 2px solid var(--color-board-highlight);
+    border-bottom: 2px solid var(--color-board-border);
+    border-right: 2px solid var(--color-board-border);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.reset-button:active {
+    border-top: 2px solid var(--color-board-border);
+    border-left: 2px solid var(--color-board-border);
+    border-bottom: 2px solid var(--color-board-highlight);
+    border-right: 2px solid var(--color-board-highlight);
+}
+
+.reset-button:hover {
+    background-color: var(--color-reset-hover);
+}
