@@ -14,9 +14,10 @@ export const BoardProvider: React.FC<BoardProviderProps> = ({
                                                             }) => {
 
     const {gameStatus, setGameStatus} = useGameStatus();
-    const isPlaying = gameStatus === "playing";
 
+    const isPlaying = gameStatus === "playing";
     const {startTime, setStartTime, elapsedTime, setElapsedTime} = useGameTimer(isPlaying);
+
     const {board, setBoard, resetBoard} = useBoardState(
         rows,
         cols,
@@ -40,13 +41,16 @@ export const BoardProvider: React.FC<BoardProviderProps> = ({
         elapsedTime,
     }), [
         board,
+        setBoard,
+        resetBoard,
         rows,
         cols,
         bombRate,
         gameStatus,
+        setGameStatus,
         startTime,
+        setStartTime,
         elapsedTime,
-        resetBoard,
     ]);
 
     return (
