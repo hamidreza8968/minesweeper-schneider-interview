@@ -1,4 +1,4 @@
-export function loadFromStorage<T>(key: string, fallback: T | null = null): T | null {
+export function loadFromStorage<T>(key: string, fallback: T): T {
     const stored = localStorage.getItem(key);
     if (stored === null) return fallback;
 

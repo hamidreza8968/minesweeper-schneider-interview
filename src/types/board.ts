@@ -42,3 +42,11 @@ export interface CellProps {
     onRightClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
     isSelected: boolean;
 }
+
+
+export interface StoredBoard {
+    rows: number;
+    cols: number;
+    bombRate: number;
+    board: CellType[][];
+};
